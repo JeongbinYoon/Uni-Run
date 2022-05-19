@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
 
     void Update() {
         // 게임 오버 상태에서 게임을 재시작할 수 있게 하는 처리
-        if(isGameover && Input.GetMouseButtonDown(0)){
+        if(isGameover && (Input.GetKey(KeyCode.R) || Input.GetMouseButtonDown(1))){
             // 게임 오버 상태에서 마우스 왼쪽 버튼을 클릭하면 현재 씬 재시작
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
